@@ -3,8 +3,8 @@
 /* this ALWAYS GENERATED file contains the proxy stub code */
 
 
- /* File created by MIDL compiler version 7.00.0500 */
-/* at Tue Mar 15 23:54:50 2011
+ /* File created by MIDL compiler version 6.00.0366 */
+/* at Sat Apr 03 20:46:24 2021
  */
 /* Compiler settings for ..\..\publish\idl\bksafesvc.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)
@@ -23,13 +23,9 @@
 #if _MSC_VER >= 1200
 #pragma warning(push)
 #endif
-
-#pragma warning( disable: 4211 )  /* redefine extern to static */
-#pragma warning( disable: 4232 )  /* dllimport identity*/
-#pragma warning( disable: 4024 )  /* array to pointer mapping*/
-#pragma warning( disable: 4152 )  /* function/data pointer conversion in expression */
 #pragma warning( disable: 4100 ) /* unreferenced arguments in x86 call */
-
+#pragma warning( disable: 4211 )  /* redefine extent to static */
+#pragma warning( disable: 4232 )  /* dllimport identity*/
 #pragma optimize("", off ) 
 
 #define USE_STUBLESS_PROXY
@@ -51,36 +47,28 @@
 
 #define TYPE_FORMAT_STRING_SIZE   57                                
 #define PROC_FORMAT_STRING_SIZE   127                               
-#define EXPR_FORMAT_STRING_SIZE   1                                 
 #define TRANSMIT_AS_TABLE_SIZE    0            
 #define WIRE_MARSHAL_TABLE_SIZE   1            
 
-typedef struct _bksafesvc_MIDL_TYPE_FORMAT_STRING
+typedef struct _MIDL_TYPE_FORMAT_STRING
     {
     short          Pad;
     unsigned char  Format[ TYPE_FORMAT_STRING_SIZE ];
-    } bksafesvc_MIDL_TYPE_FORMAT_STRING;
+    } MIDL_TYPE_FORMAT_STRING;
 
-typedef struct _bksafesvc_MIDL_PROC_FORMAT_STRING
+typedef struct _MIDL_PROC_FORMAT_STRING
     {
     short          Pad;
     unsigned char  Format[ PROC_FORMAT_STRING_SIZE ];
-    } bksafesvc_MIDL_PROC_FORMAT_STRING;
-
-typedef struct _bksafesvc_MIDL_EXPR_FORMAT_STRING
-    {
-    long          Pad;
-    unsigned char  Format[ EXPR_FORMAT_STRING_SIZE ];
-    } bksafesvc_MIDL_EXPR_FORMAT_STRING;
+    } MIDL_PROC_FORMAT_STRING;
 
 
 static RPC_SYNTAX_IDENTIFIER  _RpcTransferSyntax = 
 {{0x8A885D04,0x1CEB,0x11C9,{0x9F,0xE8,0x08,0x00,0x2B,0x10,0x48,0x60}},{2,0}};
 
 
-extern const bksafesvc_MIDL_TYPE_FORMAT_STRING bksafesvc__MIDL_TypeFormatString;
-extern const bksafesvc_MIDL_PROC_FORMAT_STRING bksafesvc__MIDL_ProcFormatString;
-extern const bksafesvc_MIDL_EXPR_FORMAT_STRING bksafesvc__MIDL_ExprFormatString;
+extern const MIDL_TYPE_FORMAT_STRING __MIDL_TypeFormatString;
+extern const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString;
 
 
 extern const MIDL_STUB_DESC Object_StubDesc;
@@ -100,11 +88,11 @@ extern const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TA
 #error You need a Windows 2000 or later to run this stub because it uses these features:
 #error   /robust command line switch.
 #error However, your C/C++ compilation flags indicate you intend to run this app on earlier systems.
-#error This app will fail with the RPC_X_WRONG_STUB_VERSION error.
+#error This app will die there with the RPC_X_WRONG_STUB_VERSION error.
 #endif
 
 
-static const bksafesvc_MIDL_PROC_FORMAT_STRING bksafesvc__MIDL_ProcFormatString =
+static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
     {
         0,
         {
@@ -225,7 +213,7 @@ static const bksafesvc_MIDL_PROC_FORMAT_STRING bksafesvc__MIDL_ProcFormatString 
         }
     };
 
-static const bksafesvc_MIDL_TYPE_FORMAT_STRING bksafesvc__MIDL_TypeFormatString =
+static const MIDL_TYPE_FORMAT_STRING __MIDL_TypeFormatString =
     {
         0,
         {
@@ -315,7 +303,7 @@ static const unsigned short Ibkcomm_FormatStringOffsetTable[] =
 static const MIDL_STUBLESS_PROXY_INFO Ibkcomm_ProxyInfo =
     {
     &Object_StubDesc,
-    bksafesvc__MIDL_ProcFormatString.Format,
+    __MIDL_ProcFormatString.Format,
     &Ibkcomm_FormatStringOffsetTable[-3],
     0,
     0,
@@ -327,7 +315,7 @@ static const MIDL_SERVER_INFO Ibkcomm_ServerInfo =
     {
     &Object_StubDesc,
     0,
-    bksafesvc__MIDL_ProcFormatString.Format,
+    __MIDL_ProcFormatString.Format,
     &Ibkcomm_FormatStringOffsetTable[-3],
     0,
     0,
@@ -380,18 +368,18 @@ static const MIDL_STUB_DESC Object_StubDesc =
     0,
     0,
     0,
-    bksafesvc__MIDL_TypeFormatString.Format,
+    __MIDL_TypeFormatString.Format,
     1, /* -error bounds_check flag */
     0x50002, /* Ndr library version */
     0,
-    0x70001f4, /* MIDL Version 7.0.500 */
+    0x600016e, /* MIDL Version 6.0.366 */
     0,
     UserMarshalRoutines,
     0,  /* notify & notify_flag routine table */
     0x1, /* MIDL flag */
     0, /* cs routines */
     0,   /* proxy/server info */
-    0
+    0   /* Reserved5 */
     };
 
 const CInterfaceProxyVtbl * _bksafesvc_ProxyVtblList[] = 

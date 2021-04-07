@@ -3,8 +3,8 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 7.00.0500 */
-/* at Wed Mar 16 17:07:26 2011
+ /* File created by MIDL compiler version 6.00.0366 */
+/* at Sat Apr 03 20:46:25 2021
  */
 /* Compiler settings for ..\..\publish\idl\bksafesvc.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)
@@ -71,6 +71,8 @@ typedef struct bkcomm bkcomm;
 extern "C"{
 #endif 
 
+void * __RPC_USER MIDL_user_allocate(size_t);
+void __RPC_USER MIDL_user_free( void * ); 
 
 #ifndef __Ibkcomm_INTERFACE_DEFINED__
 #define __Ibkcomm_INTERFACE_DEFINED__
@@ -110,8 +112,7 @@ EXTERN_C const IID IID_Ibkcomm;
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             Ibkcomm * This,
             /* [in] */ REFIID riid,
-            /* [iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
+            /* [iid_is][out] */ void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             Ibkcomm * This);
@@ -133,7 +134,7 @@ EXTERN_C const IID IID_Ibkcomm;
             Ibkcomm * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [range][in] */ UINT cNames,
+            /* [in] */ UINT cNames,
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
@@ -177,42 +178,81 @@ EXTERN_C const IID IID_Ibkcomm;
 
 
 #define Ibkcomm_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
 
 #define Ibkcomm_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+    (This)->lpVtbl -> AddRef(This)
 
 #define Ibkcomm_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+    (This)->lpVtbl -> Release(This)
 
 
 #define Ibkcomm_GetTypeInfoCount(This,pctinfo)	\
-    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
+    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
 
 #define Ibkcomm_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
+    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
 
 #define Ibkcomm_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
+    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
 
 #define Ibkcomm_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
+    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
 
 
 #define Ibkcomm_Initialize(This,nModule,ulProcId,nVersion)	\
-    ( (This)->lpVtbl -> Initialize(This,nModule,ulProcId,nVersion) ) 
+    (This)->lpVtbl -> Initialize(This,nModule,ulProcId,nVersion)
 
 #define Ibkcomm_Call(This,nMethod,bstrParams,pbstrResponse)	\
-    ( (This)->lpVtbl -> Call(This,nMethod,bstrParams,pbstrResponse) ) 
+    (This)->lpVtbl -> Call(This,nMethod,bstrParams,pbstrResponse)
 
 #define Ibkcomm_Uninitialize(This)	\
-    ( (This)->lpVtbl -> Uninitialize(This) ) 
+    (This)->lpVtbl -> Uninitialize(This)
 
 #endif /* COBJMACROS */
 
 
 #endif 	/* C style interface */
 
+
+
+/* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Ibkcomm_Initialize_Proxy( 
+    Ibkcomm * This,
+    /* [in] */ int nModule,
+    /* [in] */ ULONG ulProcId,
+    /* [in] */ int nVersion);
+
+
+void __RPC_STUB Ibkcomm_Initialize_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+/* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Ibkcomm_Call_Proxy( 
+    Ibkcomm * This,
+    /* [in] */ int nMethod,
+    /* [in] */ BSTR bstrParams,
+    /* [retval][out] */ BSTR *pbstrResponse);
+
+
+void __RPC_STUB Ibkcomm_Call_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+/* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Ibkcomm_Uninitialize_Proxy( 
+    Ibkcomm * This);
+
+
+void __RPC_STUB Ibkcomm_Uninitialize_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
 
 
 

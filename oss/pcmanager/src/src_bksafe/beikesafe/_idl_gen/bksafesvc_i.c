@@ -5,8 +5,8 @@
 /* link this file in with the server and any clients */
 
 
- /* File created by MIDL compiler version 7.00.0500 */
-/* at Wed Mar 16 17:07:26 2011
+ /* File created by MIDL compiler version 6.00.0366 */
+/* at Sat Apr 03 20:46:25 2021
  */
 /* Compiler settings for ..\..\publish\idl\bksafesvc.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)

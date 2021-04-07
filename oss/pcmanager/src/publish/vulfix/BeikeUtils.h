@@ -11,6 +11,12 @@
 #include <string>
 #include <vector>
 
+
+//added by myself
+BOOL IsWin64();
+//end
+
+
 enum E_WinVersion 
 {
 	WINUNKNOWN = 0,

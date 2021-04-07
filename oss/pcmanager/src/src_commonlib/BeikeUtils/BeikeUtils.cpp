@@ -4,7 +4,13 @@
 #include "miniutil/bkprocprivilege.h"
 #pragma comment(lib, "Version.lib")
 
-
+//added by myself
+BOOL IsWin64()
+{
+	#define IS_64BIT_OS (sizeof(void *) == 8)
+	return IS_64BIT_OS;
+}
+//end
 DWORD TransSysCode(LPCTSTR lpszSysName)
 {
 	static struct{

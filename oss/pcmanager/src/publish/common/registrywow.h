@@ -5,6 +5,34 @@
 #define REGISTRY_NORMAL		1
 #define REGISTRY_WOW		2 
 
+//added by myself
+// Support Windows SDK v5.0
+#ifndef LSTATUS
+typedef __success(return==ERROR_SUCCESS) LONG LSTATUS;
+#endif
+
+WINBASEAPI
+BOOLEAN
+WINAPI
+Wow64EnableWow64FsRedirection (
+							   __in BOOLEAN Wow64FsEnableRedirection
+							   );
+ 
+WINBASEAPI
+BOOL
+WINAPI
+Wow64DisableWow64FsRedirection (
+								__out PVOID *OldValue
+								);
+ 
+WINBASEAPI
+BOOL
+WINAPI
+Wow64RevertWow64FsRedirection (
+							   __in PVOID OlValue
+							   );
+//end
+
 template<int T>
 class  CRegistryWow_Open
 {
